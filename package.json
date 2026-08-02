@@ -1,6 +1,6 @@
 {
   "name": "@sebastienrousseau/lefthook-config",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Shareable Lefthook git hook configuration rules replacing heavy legacy hook managers.",
   "author": "Sebastien Rousseau <sebastienrousseau@users.noreply.github.com>",
   "license": "ISC",
