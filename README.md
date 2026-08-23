@@ -1,4 +1,4 @@
-<!-- SPDX-License-Identifier: ISC -->
+<!-- SPDX-License-Identifier: Apache-2.0 OR MIT>
 
 <p align="center">
   <img src="./lefthook-config.svg" alt="lefthook-config logo" width="128" />
