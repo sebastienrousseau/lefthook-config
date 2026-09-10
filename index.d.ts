@@ -1,6 +1,7 @@
-export interface LefthookConfig {
-  [key: string]: unknown;
-}
+// SPDX-FileCopyrightText: 2026 Sebastien Rousseau <sebastian.rousseau@gmail.com>
+// SPDX-License-Identifier: Apache-2.0 OR MIT
+
+export type LefthookConfig = string;
 
 declare const config: LefthookConfig;
 export default config;

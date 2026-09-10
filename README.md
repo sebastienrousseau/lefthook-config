@@ -17,7 +17,7 @@
   <a href="https://scorecard.dev/viewer/?uri=github.com/sebastienrousseau/lefthook-config"><img src="https://img.shields.io/ossf-scorecard/github.com/sebastienrousseau/lefthook-config?style=for-the-badge&label=OpenSSF%20Scorecard&logo=openssf" alt="OpenSSF Scorecard" /></a>
   <a href="https://www.bestpractices.dev/projects/14511"><img src="https://img.shields.io/cii/level/14511?style=for-the-badge&label=OpenSSF%20Best%20Practices&logo=openssf" alt="OpenSSF Best Practices" /></a>
   <a href="LICENSE-APACHE"><img src="https://img.shields.io/badge/license-Apache--2.0%20OR%20MIT-blue.svg?style=for-the-badge" alt="License: Apache-2.0 OR MIT" /></a>
-  <a href="#minimum-toolchain-policy"><img src="https://img.shields.io/badge/node->=%2018.0.0-93450a.svg?style=for-the-badge&logo=node.js" alt="Node >= 18.0.0" /></a>
+  <a href="#minimum-toolchain-policy"><img src="https://img.shields.io/badge/node->=%2020.0.0-93450a.svg?style=for-the-badge&logo=node.js" alt="Node >= 20.0.0" /></a>
 </p>
 
 ---
@@ -84,7 +84,7 @@ make            # check + test
 
 ## Requirements
 
-- **Node.js 18.0.0 or newer.** Every package manifest declares `engines.node`, and CI enforces the runtime floor on every push across macOS, Linux, and Windows.
+- **Node.js 20.0.0 or newer.** Declared in `engines.node` and proved on every push: the CI matrix runs Node 20, 22, 24 on Linux, macOS and Windows, and fails if the matrix floor and `engines.node` disagree.
 - **npm 9.0.0 or newer** (or modern pnpm / yarn / bun).
 - **Module systems.** Full native support for ECMAScript Modules (ESM) and CommonJS (CJS).
 - **TypeScript 5.0 or newer** (optional, recommended for type checking).
@@ -93,25 +93,19 @@ make            # check + test
 
 ## Quick Start
 
-### In `package.json`
+Lefthook reads `lefthook.yml` from the repository root.
 
-```json
-{
-  "lefthook": "@sebastienrousseau/lefthook-config"
-}
+### Copy it into place
+
+```bash
+cp node_modules/@sebastienrousseau/lefthook-config/lefthook.yml ./lefthook.yml
+npx lefthook install
 ```
 
-### In CommonJS Configuration
+### Or read it programmatically
 
 ```js
-module.exports = require("@sebastienrousseau/lefthook-config");
-```
-
-### In ES Module Configuration
-
-```js
-import config from "@sebastienrousseau/lefthook-config";
-export default config;
+const yaml = require("@sebastienrousseau/lefthook-config"); // the file contents, as a string
 ```
 
 ---
@@ -240,7 +234,7 @@ make test
 
 ## Minimum-toolchain policy
 
-The minimum supported Node.js version is **18.0.0**. The floor may raise only when:
+The minimum supported Node.js version is **20.0.0**. The floor may raise only when:
 
 1. An upstream LTS version reaches official End-of-Life (EOL).
 2. The reason is explicitly recorded in `CHANGELOG.md` and `DEVELOPMENT.md`.
