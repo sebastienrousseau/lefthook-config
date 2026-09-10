@@ -21,14 +21,18 @@ An exhaustive overview covering **100% of the features, rules, and capabilities*
 ## Feature Deep Dive
 
 ### 1. Parallel Execution
+
 Runs pre-commit checks concurrently for minimal latency. Designed to guarantee deterministic behavior across all development and continuous integration environments.
 
 ### 2. File Pattern Filtering
+
 Targeted globbing for JS, TS, and config files. Designed to guarantee deterministic behavior across all development and continuous integration environments.
 
 ### 3. Pre-Commit Lint Gate
+
 Automated test and lint verification before commits. Designed to guarantee deterministic behavior across all development and continuous integration environments.
 
 ### 4. Staged Changes Scope
+
 Executes exclusively on staged files. Designed to guarantee deterministic behavior across all development and continuous integration environments.
 
