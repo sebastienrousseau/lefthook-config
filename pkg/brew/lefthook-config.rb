@@ -6,7 +6,7 @@
 class LefthookConfig < Formula
   desc "Shareable Lefthook git hook configuration rules replacing heavy legacy hook managers"
   homepage "https://github.com/sebastienrousseau/lefthook-config"
-  url "https://registry.npmjs.org/@sebastienrousseau/lefthook-config/-/lefthook-config-0.0.7.tgz"
+  url "https://registry.npmjs.org/@sebastienrousseau/lefthook-config/-/lefthook-config-0.0.9.tgz"
   license any_of: ["Apache-2.0", "MIT"]
 
   depends_on "node"
